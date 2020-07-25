@@ -12,6 +12,12 @@ const App: FC = () => {
         palette: {
           type: prefersDarkMode ? 'dark' : 'light',
         },
+        typography: {
+          fontFamily: 'Helvetica Neue',
+          // In Chinese and Japanese the characters are usually larger,
+          // so a smaller fontsize may be appropriate.
+          fontSize: 12,
+        },
       }),
     [prefersDarkMode]
   );
