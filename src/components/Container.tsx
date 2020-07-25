@@ -5,9 +5,8 @@ import Profile from './Profile';
 
 const Container: FC = () => {
   return (
-    <Box className="container" style={{ width: '100vw', height: '100vh' }}>
+    <Box className="container" style={{ width: '100%', height: '100%', margin: '2em' }}>
       <Profile />
-      <div>OK</div>
     </Box>
   );
 };
