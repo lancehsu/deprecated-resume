@@ -1,11 +1,11 @@
-import React, { FC } from "react";
-import Avatar from "./Avatar";
+import React, { FC } from 'react';
+import { Box, Typography } from '@material-ui/core';
 
 const Bios: FC = () => {
   return (
-    <div className="container" style={{ width: "100%" }}>
-      <Avatar />
-    </div>
+    <Box className="bios">
+      <Typography>Kung-Ling Hsu</Typography>
+    </Box>
   );
 };
 
