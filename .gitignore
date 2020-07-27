@@ -12,6 +12,7 @@
 /build
 
 # misc
+public/photo.png
 .DS_Store
 .env.local
 .env.development.local
