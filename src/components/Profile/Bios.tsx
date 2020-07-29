@@ -7,7 +7,7 @@ import MailLink from './MailLink';
 
 const Bios: FC = () => {
   return (
-    <Box className="bios" style={{ width: '70em', margin: '1em' }}>
+    <Box className="bios" style={{ width: '60em', margin: '1em' }}>
       <Typography variant="h2">Kung-Ling Hsu</Typography>
       <Box style={{ margin: '0.5em' }}>
         <LinkedInLinkIcon />
@@ -15,7 +15,7 @@ const Bios: FC = () => {
       </Box>
       <Typography variant="h5" style={{ margin: '0.5em' }}>
         A detail-oriented and dependable software engineer seeking a position to offer expertise in
-        HTML/CSS/JavaScript, React.js, Redux, Apollo GraphQL to develop web application.
+        HTML/CSS/JavaScript, React.js, Redux, Apollo GraphQL, Next.js to develop web application.
       </Typography>
       <Typography variant="h6" style={{ margin: '0.5em' }}>
         Front-end/Full-stack engineer

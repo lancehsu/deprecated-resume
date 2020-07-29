@@ -1,7 +1,7 @@
 import React, { useMemo, FC, useEffect } from 'react';
 import './App.css';
 import Container from './components/Container';
-import { createMuiTheme, ThemeProvider, useMediaQuery } from '@material-ui/core';
+import { Box, createMuiTheme, ThemeProvider, useMediaQuery } from '@material-ui/core';
 
 const App: FC = () => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -10,7 +10,7 @@ const App: FC = () => {
     () =>
       createMuiTheme({
         palette: {
-          type: prefersDarkMode ? 'dark' : 'light',
+          type: 'light',
         },
         typography: {
           fontFamily: 'Helvetica Neue',
@@ -28,11 +28,11 @@ const App: FC = () => {
   }, []);
 
   return (
-    <div className="App">
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <Box className="App">
         <Container />
-      </ThemeProvider>
-    </div>
+      </Box>
+    </ThemeProvider>
   );
 };
 
