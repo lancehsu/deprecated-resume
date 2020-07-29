@@ -1,5 +1,5 @@
-import React, { useMemo, FC } from 'react';
-
+import React, { useMemo, FC, useEffect } from 'react';
+import './App.css';
 import Container from './components/Container';
 import { createMuiTheme, ThemeProvider, useMediaQuery } from '@material-ui/core';
 
@@ -21,6 +21,11 @@ const App: FC = () => {
       }),
     [prefersDarkMode]
   );
+
+  useEffect(() => {
+    window.addEventListener('contextmenu', (e) => e.preventDefault());
+    return () => window.addEventListener('contextmenu', (e) => e.preventDefault());
+  }, []);
 
   return (
     <div className="App">
