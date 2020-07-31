@@ -1,4 +1,4 @@
-import ResumeContent, { Profile, Skills } from './resumeContentType';
+import ResumeContent, { Education, Profile, Skills, WorkExperience } from './resumeContentType';
 
 export const profile: Profile = {
   name: 'Kung-Ling Hsu',
@@ -45,12 +45,76 @@ export const skills: Skills = {
   ],
 };
 
+export const workExperience: WorkExperience = {
+  ['Linker Networks Inc.']: {
+    title: 'Software Engineer',
+    from: '2019 Feb',
+    to: 'Present',
+    content: [
+      {
+        name: 'Building data labeling platform',
+        details: [
+          {
+            name:
+              'Developing web application using TypeScript, React.js, Apollo GraphQL, Next.js, & Fluent UI',
+          },
+          { name: 'Developing 2D image labeling system using canvas 2d library Konva.js' },
+          { name: 'Developing medical image labeling system for CT & MRI images labeling' },
+          { name: 'Developing LiDAR point cloud labeling system using WebGL framework Babylon.js' },
+          { name: 'Communicate with back-end engineers about API design' },
+          { name: 'Providing web app internationalization by i18next for global users' },
+          {
+            name:
+              'Communicate with data scientists about UX and APIs for label assistance tools implemented using computer vision and machine learning',
+          },
+        ],
+      },
+      {
+        name:
+          'Developing Microsoft Vision on Edge solution with Typescript, React.js, Redux, Redux-Thunk, Konva.js, & Fluent UI',
+        url: 'https://github.com/Azure-Samples/azure-intelligent-edge-patterns',
+      },
+    ],
+  },
+};
+
+export const education: Education = {
+  ['National Taiwan University']: {
+    from: '2014',
+    to: '2017',
+    content: [
+      {
+        name: 'Conference',
+        details: [
+          {
+            name:
+              'International Symposium on Machinery and Mechatronics for Agriculture and Bio-systems Engineering (ISMAB) 2016',
+          },
+          { name: 'Conference on Agricultural Machinery and Bio-Mechatronics Engineering 2016' },
+        ],
+      },
+      {
+        name: 'Journal',
+        details: [
+          {
+            name:
+              'Hsu, H.-C., Hsu, K.-L., Chan, C.-Y., Wang, C.-N., & Kuo, Y.-F., Quantifying colour and spot characteristics for the ventral petals in Sinningia speciosa, Biosystems Engineering, 167, 40-50.',
+            url: 'https://www.sciencedirect.com/science/article/abs/pii/S1537511017308218',
+          },
+        ],
+      },
+    ],
+  },
+};
+
+export const projects = {};
+
 const resumeContent: ResumeContent = {
   profile,
   skills,
-  workExperience: {},
-  education: {},
-  projects: {},
+  workExperience,
+  education,
+  projects,
 };
 
 export default resumeContent;
