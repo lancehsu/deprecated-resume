@@ -1,5 +1,5 @@
-import { Box, Chip, Divider, Typography } from '@material-ui/core';
 import React, { FC } from 'react';
+import { Box, Chip, Divider, Typography } from '@material-ui/core';
 
 interface SkillListProps {
   title: string;

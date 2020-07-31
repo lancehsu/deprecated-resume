@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { MailOutline } from '@material-ui/icons';
 import { Box, Typography } from '@material-ui/core';
-import { profile } from '../../../public/resumeContent';
+import { profile } from '../../content/resumeContent';
 
 const MailLink: FC = () => (
   <Box style={{ display: 'flex', alignItems: 'center', margin: '0.5em' }}>

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Box, Typography } from '@material-ui/core';
 import SkillList from './SkillList';
-import { skills } from '../../../public/resumeContent';
+import { skills } from '../../content/resumeContent';
 
 const Skills: FC = () => {
   return (

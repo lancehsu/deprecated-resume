@@ -1,4 +1,4 @@
-import ResumeContent, { Profile, Skills } from '../src/types/resumeContent';
+import ResumeContent, { Profile, Skills } from './resumeContentType';
 
 export const profile: Profile = {
   name: 'Kung-Ling Hsu',
