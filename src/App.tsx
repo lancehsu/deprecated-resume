@@ -1,16 +1,26 @@
-import React, { useMemo, FC, useEffect } from 'react';
+import React, { useMemo, FC, useEffect, useState } from 'react';
 import './App.css';
 import Container from './components/Container';
-import { Box, createMuiTheme, ThemeProvider, useMediaQuery } from '@material-ui/core';
+import {
+  Box,
+  createMuiTheme,
+  IconButton,
+  ThemeProvider,
+  Tooltip,
+  useMediaQuery,
+  CssBaseline
+} from '@material-ui/core';
+import { Brightness2, BrightnessHigh } from '@material-ui/icons';
 
 const App: FC = () => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [darkMode, setDarkMode] = useState<boolean>(false);
 
   const theme = useMemo(
     () =>
       createMuiTheme({
         palette: {
-          type: 'light',
+          type: darkMode ? 'dark' : 'light',
         },
         typography: {
           fontFamily: 'Helvetica Neue',
@@ -19,8 +29,12 @@ const App: FC = () => {
           fontSize: 12,
         },
       }),
-    [prefersDarkMode]
+    [darkMode]
   );
+
+  useEffect(() => {
+    setDarkMode(prefersDarkMode);
+  }, [prefersDarkMode]);
 
   useEffect(() => {
     window.addEventListener('contextmenu', (e) => e.preventDefault());
@@ -29,7 +43,19 @@ const App: FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Box className="App">
+        <Box style={{ margin: '1em', display: 'flex', justifyContent: 'flex-end' }}>
+        <Tooltip title={darkMode ? 'Light' : 'Dark'}>
+          <IconButton
+            onClick={() => {
+              setDarkMode((prev) => !prev);
+            }}
+          >
+            {darkMode ? <BrightnessHigh /> : <Brightness2 />}
+          </IconButton>
+        </Tooltip>
+        </Box>
         <Container />
       </Box>
     </ThemeProvider>

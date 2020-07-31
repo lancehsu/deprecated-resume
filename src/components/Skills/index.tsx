@@ -41,9 +41,9 @@ const Skills: FC = () => {
     <Box style={{ margin: '2em' }}>
       <Typography variant="h2">Skills</Typography>
       <Box display="grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: '3em' }}>
-        <SkillList title="Proficiency" skills={proficiency} />
-        <SkillList title="Familiar" skills={familiar} />
-        <SkillList title="Knowledge" skills={knowledge} />
+        <SkillList title="Proficient in" skills={proficiency} />
+        <SkillList title="Familiar with" skills={familiar} />
+        <SkillList title="Knowledge of" skills={knowledge} />
       </Box>
     </Box>
   );
