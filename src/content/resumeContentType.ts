@@ -1,9 +1,22 @@
+export enum Companies {
+  linker = 'Linker Networks Inc.',
+}
+
+export enum Colleges {
+  NTU = 'National Taiwan University',
+  NCHU = 'National Chung Hsing University',
+}
+
+export enum ProjectNames {
+  Azure = 'Factory AI Vision',
+}
+
 type ResumeContent = {
   profile: Profile;
   skills: Skills;
   workExperience: WorkExperience;
   education: Education;
-  projects: Projects;
+  project: Project;
 };
 
 export type Profile = {
@@ -32,7 +45,7 @@ export type WorkExperienceInfo = {
 };
 
 export type WorkExperience = {
-  [company: string]: WorkExperienceInfo;
+  [company in Companies]: WorkExperienceInfo;
 };
 
 export type EducationInfo = {
@@ -43,9 +56,16 @@ export type EducationInfo = {
 };
 
 export type Education = {
-  [college: string]: EducationInfo;
+  [college in Colleges]: EducationInfo;
 };
 
-export type Projects = {};
+export type ProjectInfo = {
+  image: string;
+  content: string;
+  githubLink: string;
+};
+export type Project = {
+  [project in ProjectNames]: ProjectInfo;
+};
 
 export default ResumeContent;

@@ -4,9 +4,10 @@ import { Box, Typography } from '@material-ui/core';
 
 import EducationItem from './EducationItem';
 import { education } from '../../content/resumeContent';
+import { Colleges } from '../../content/resumeContentType';
 
 const EducationList: FC = () => {
-  const collegeNames = Object.keys(education);
+  const collegeNames = Object.keys(education) as Colleges[];
   return (
     <Box style={{ margin: '2em' }}>
       <Typography variant="h2">Education</Typography>

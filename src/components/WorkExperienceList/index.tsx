@@ -4,9 +4,10 @@ import { Box, Typography } from '@material-ui/core';
 
 import WorkExperienceItem from './WorkExperienceItem';
 import { workExperience } from '../../content/resumeContent';
+import { Companies } from '../../content/resumeContentType';
 
 const WorkExperienceList: FC = () => {
-  const companyNames = Object.keys(workExperience);
+  const companyNames = Object.keys(workExperience) as Companies[];
   return (
     <Box style={{ margin: '2em' }}>
       <Typography variant="h2">Work Experience</Typography>

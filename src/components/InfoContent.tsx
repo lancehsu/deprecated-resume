@@ -10,9 +10,9 @@ const InfoContent: FC<InfoContentProps> = ({ name, url, details }) => {
   return (
     <>
       <InfoTitle name={name} url={url} />
-      {details?.map((detail) =>
+      {details?.map((detail, i) =>
         detail.url ? (
-          <Typography color="primary" variant="h6" style={{ marginLeft: '2em' }}>
+          <Typography key={i} color="primary" variant="h6" style={{ marginLeft: '2em' }}>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -23,7 +23,7 @@ const InfoContent: FC<InfoContentProps> = ({ name, url, details }) => {
             </a>
           </Typography>
         ) : (
-          <Typography variant="h6" style={{ marginLeft: '2em' }}>
+          <Typography key={i} variant="h6" style={{ marginLeft: '2em' }}>
             {detail.name}
           </Typography>
         )

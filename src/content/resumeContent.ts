@@ -1,4 +1,13 @@
-import ResumeContent, { Education, Profile, Skills, WorkExperience } from './resumeContentType';
+import ResumeContent, {
+  Education,
+  Profile,
+  Skills,
+  WorkExperience,
+  Project,
+  Companies,
+  Colleges,
+  ProjectNames,
+} from './resumeContentType';
 
 export const profile: Profile = {
   name: 'Kung-Ling Hsu',
@@ -45,10 +54,6 @@ export const skills: Skills = {
   ],
 };
 
-enum Companies {
-  linker = 'Linker Networks Inc.',
-}
-
 export const workExperience: WorkExperience = {
   [Companies.linker]: {
     title: 'Software Engineer',
@@ -82,10 +87,6 @@ export const workExperience: WorkExperience = {
   },
 };
 
-enum Colleges {
-  NTU = 'National Taiwan University',
-  NCHU = 'National Chung Hsing University',
-}
 export const education: Education = {
   [Colleges.NTU]: {
     from: '2014',
@@ -121,14 +122,22 @@ export const education: Education = {
   },
 };
 
-export const projects = {};
+export const project: Project = {
+  [ProjectNames.Azure]: {
+    image: '/projects/Azure-Sample.png',
+    githubLink:
+      'https://github.com/Azure-Samples/azure-intelligent-edge-patterns/tree/master/factory-ai-vision',
+    content:
+      'A sample showing how to deploy a Custom Vision model to Azure IoT edge device and get Machine learning solution up and running in a single day.',
+  },
+};
 
 const resumeContent: ResumeContent = {
   profile,
   skills,
   workExperience,
   education,
-  projects,
+  project,
 };
 
 export default resumeContent;

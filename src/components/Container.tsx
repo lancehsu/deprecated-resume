@@ -4,7 +4,8 @@ import { Box } from '@material-ui/core';
 import Profile from './Profile';
 import Skills from './Skills';
 import WorkExperienceList from './WorkExperienceList';
-import EducationList from './Education';
+import EducationList from './EducationList';
+import ProjectList from './ProjectList';
 
 const Container: FC = () => {
   return (
@@ -13,6 +14,7 @@ const Container: FC = () => {
       <Skills />
       <WorkExperienceList />
       <EducationList />
+      <ProjectList />
     </Box>
   );
 };
