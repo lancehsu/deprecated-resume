@@ -4,15 +4,15 @@ import TimelineConnector from '@material-ui/lab/TimelineConnector/TimelineConnec
 import TimelineContent from '@material-ui/lab/TimelineContent/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot/TimelineDot';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator/TimelineSeparator';
-import { WorkExperienceInfo } from '../../content/resumeContentType';
+import { EducationInfo } from '../../content/resumeContentType';
 import RightTimelineItem from '../RightTimelineItem';
 import InfoContent from '../InfoContent';
 
-interface WorkExperienceItemProps {
+interface EducationItemProps {
   name: string;
-  info: WorkExperienceInfo;
+  info: EducationInfo;
 }
-const WorkExperienceItem: FC<WorkExperienceItemProps> = ({ name, info }) => {
+const EducationItem: FC<EducationItemProps> = ({ name, info }) => {
   return (
     <RightTimelineItem>
       <TimelineSeparator>
@@ -21,8 +21,8 @@ const WorkExperienceItem: FC<WorkExperienceItemProps> = ({ name, info }) => {
       </TimelineSeparator>
       <TimelineContent>
         <Typography variant="h3">{name}</Typography>
-        <Typography variant="h4">{`${info.title}, (${info.from}-${info.to})`}</Typography>
-        {info.content.map((item, i) => {
+        <Typography variant="h4">{`${info.degree}, (${info.from}-${info.to})`}</Typography>
+        {info.content?.map((item, i) => {
           return <InfoContent key={i} name={item.name} url={item.url} details={item.details} />;
         })}
       </TimelineContent>
@@ -30,4 +30,4 @@ const WorkExperienceItem: FC<WorkExperienceItemProps> = ({ name, info }) => {
   );
 };
 
-export default WorkExperienceItem;
+export default EducationItem;

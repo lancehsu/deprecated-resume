@@ -13,7 +13,12 @@ const SkillList: FC<SkillListProps> = ({ title, skills }) => {
       </Typography>
       <Divider variant="fullWidth" style={{ margin: '0.5em 0' }} />
       {skills.map((skill, i) => (
-        <Chip key={i} style={{ margin: '0.1em' }} color="primary" label={skill} />
+        <Chip
+          key={i}
+          style={{ margin: '0.1em' }}
+          color="primary"
+          label={<Typography variant="h6">{skill}</Typography>}
+        />
       ))}
     </Box>
   );

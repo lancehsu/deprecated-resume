@@ -15,7 +15,6 @@ const WorkExperienceList: FC = () => {
           <WorkExperienceItem key={i} name={name} info={workExperience[name]} />
         ))}
       </Timeline>
-
     </Box>
   );
 };
