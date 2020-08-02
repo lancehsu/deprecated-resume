@@ -24,21 +24,26 @@ export type Skills = {
 
 type Content = { name: string; url?: string; details?: { name: string; url?: string }[] };
 
+export type WorkExperienceInfo = {
+  title: string;
+  from: string;
+  to: string;
+  content: Content[];
+};
+
 export type WorkExperience = {
-  [company: string]: {
-    title: string;
-    from: string;
-    to: string;
-    content: Content[];
-  };
+  [company: string]: WorkExperienceInfo;
+};
+
+export type EducationInfo = {
+  from: string;
+  to: string;
+  degree: string;
+  content?: Content[];
 };
 
 export type Education = {
-  [company: string]: {
-    from: string;
-    to: string;
-    content: Content[];
-  };
+  [college: string]: EducationInfo;
 };
 
 export type Projects = {};

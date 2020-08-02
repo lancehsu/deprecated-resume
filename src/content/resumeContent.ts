@@ -45,8 +45,12 @@ export const skills: Skills = {
   ],
 };
 
+enum Companies {
+  linker = 'Linker Networks Inc.',
+}
+
 export const workExperience: WorkExperience = {
-  ['Linker Networks Inc.']: {
+  [Companies.linker]: {
     title: 'Software Engineer',
     from: '2019 Feb',
     to: 'Present',
@@ -78,10 +82,15 @@ export const workExperience: WorkExperience = {
   },
 };
 
+enum Colleges {
+  NTU = 'National Taiwan University',
+  NCHU = 'National Chung Hsing University',
+}
 export const education: Education = {
-  ['National Taiwan University']: {
+  [Colleges.NTU]: {
     from: '2014',
     to: '2017',
+    degree: 'Master of Engineering, Bio-Industrial Mechatronics Engineering',
     content: [
       {
         name: 'Conference',
@@ -104,6 +113,11 @@ export const education: Education = {
         ],
       },
     ],
+  },
+  [Colleges.NCHU]: {
+    from: '2009',
+    to: '2014',
+    degree: 'Bachelor of Engineering, Chemical Engineering',
   },
 };
 
