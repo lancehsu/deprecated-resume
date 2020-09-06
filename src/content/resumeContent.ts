@@ -11,7 +11,7 @@ import ResumeContent, {
 
 export const profile: Profile = {
   name: 'Kung-Ling Hsu',
-  image: '/photo.png',
+  image: '/profile.png',
   mail: 'lancehsu12@gmail.com',
   summary:
     'A detail-oriented and dependable software engineer seeking a position to offer expertise in HTML/CSS/JavaScript, React.js, Redux, Apollo GraphQL, Next.js to develop web application.',
