@@ -1,7 +1,14 @@
 @media print
 {    
-    .App
+    .darkBtn
     {
         display: none !important;
     }
 }
+/* @media print
+{    
+    .App
+    {
+        display: none !important;
+    }
+} */

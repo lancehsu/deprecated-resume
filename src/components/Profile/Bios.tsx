@@ -8,7 +8,7 @@ import { profile } from '../../content/resumeContent';
 
 const Bios: FC = () => {
   return (
-    <Box className="bios" style={{ width: '80em', margin: '1em' }}>
+    <Box className="bios" style={{ width: '80%', margin: '1em' }}>
       <Typography variant="h2">{profile.name}</Typography>
       <Typography variant="h5" style={{ margin: '0.5em' }}>
         {profile.summary}

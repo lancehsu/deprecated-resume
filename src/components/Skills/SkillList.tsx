@@ -8,7 +8,7 @@ interface SkillListProps {
 const SkillList: FC<SkillListProps> = ({ title, skills }) => {
   return (
     <Box>
-      <Typography variant="h4" style={{ margin: '0.5em' }}>
+      <Typography variant="h5" style={{ margin: '0.5em' }}>
         {title}
       </Typography>
       <Divider variant="fullWidth" style={{ margin: '0.5em 0' }} />
@@ -17,7 +17,7 @@ const SkillList: FC<SkillListProps> = ({ title, skills }) => {
           key={i}
           style={{ margin: '0.1em' }}
           color="primary"
-          label={<Typography variant="h6">{skill}</Typography>}
+          label={<Typography variant="subtitle1">{skill}</Typography>}
         />
       ))}
     </Box>

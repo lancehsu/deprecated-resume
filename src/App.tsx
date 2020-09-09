@@ -34,6 +34,7 @@ const App: FC = () => {
         <Box style={{ margin: '1em', display: 'flex', justifyContent: 'flex-end' }}>
           <Tooltip title={darkMode ? 'Light' : 'Dark'}>
             <IconButton
+              className="darkBtn"
               onClick={() => {
                 setDarkMode((prev) => !prev);
               }}

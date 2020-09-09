@@ -6,7 +6,7 @@ import Bios from './Bios';
 const Profile: FC = () => {
   return (
     <Box className="bios" style={{ margin: '2em', display: 'flex' }}>
-      <Hidden smDown>
+      <Hidden xsDown>
         <ProfileImage />
       </Hidden>
       <Bios />
