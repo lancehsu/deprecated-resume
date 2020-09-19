@@ -3,8 +3,8 @@ import Timeline from '@material-ui/lab/Timeline/Timeline';
 import { Box, Typography } from '@material-ui/core';
 
 import EducationItem from './EducationItem';
-import { education } from '../../content/resumeContent';
-import { Colleges } from '../../content/resumeContentType';
+import { education } from '../../../static/content/resumeContent';
+import { Colleges } from '../../../static/content/resumeContentType';
 
 const EducationList: FC = () => {
   const collegeNames = Object.keys(education) as Colleges[];

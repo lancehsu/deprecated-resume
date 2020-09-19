@@ -4,7 +4,7 @@ import { Box, Typography } from '@material-ui/core';
 import LinkedInLinkIcon from './LinkedInLInkIcon';
 import GithubLinkIcon from './GithubLinkIcon';
 import MailLink from './MailLink';
-import { profile } from '../../content/resumeContent';
+import { profile } from '../../../static/content/resumeContent';
 
 const Bios: FC = () => {
   return (

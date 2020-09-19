@@ -4,7 +4,7 @@ import TimelineConnector from '@material-ui/lab/TimelineConnector/TimelineConnec
 import TimelineContent from '@material-ui/lab/TimelineContent/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot/TimelineDot';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator/TimelineSeparator';
-import { WorkExperienceInfo } from '../../content/resumeContentType';
+import { WorkExperienceInfo } from '../../../static/content/resumeContentType';
 import RightTimelineItem from '../RightTimelineItem';
 import InfoContent from '../InfoContent';
 

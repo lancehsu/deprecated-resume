@@ -11,7 +11,7 @@ export enum ProjectNames {
   Azure = 'Factory AI Vision',
 }
 
-type ResumeContent = {
+export type ResumeContent = {
   profile: Profile;
   skills: Skills;
   workExperience: WorkExperience;
@@ -67,5 +67,3 @@ export type ProjectInfo = {
 export type Project = {
   [project in ProjectNames]: ProjectInfo;
 };
-
-export default ResumeContent;

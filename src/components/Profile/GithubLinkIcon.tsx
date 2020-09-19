@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { GitHub } from '@material-ui/icons';
-import { profile } from '../../content/resumeContent';
+import { profile } from '../../../static/content/resumeContent';
 
 const GithubLinkIcon: FC = () => (
   <a href={profile.github} target="_blank" rel="noopener noreferrer">

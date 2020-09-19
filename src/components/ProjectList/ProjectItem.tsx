@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Box, Typography } from '@material-ui/core';
-import { ProjectInfo } from '../../content/resumeContentType';
+import { ProjectInfo } from '../../../static/content/resumeContentType';
 
 interface ProjectItemProps {
   name: string;

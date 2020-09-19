@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Box, Typography } from '@material-ui/core';
-import { project } from '../../content/resumeContent';
+import { project } from '../../../static/content/resumeContent';
 import ProjectItem from './ProjectItem';
-import { ProjectNames } from '../../content/resumeContentType';
+import { ProjectNames } from '../../../static/content/resumeContentType';
 
 const ProjectList: FC = () => {
   const projectNames = Object.keys(project) as ProjectNames[];

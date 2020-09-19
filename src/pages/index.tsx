@@ -1,6 +1,4 @@
 import React, { useMemo, FC, useEffect, useState } from 'react';
-import './styles/App.css';
-import Container from './components/Container';
 import {
   Box,
   IconButton,
@@ -10,7 +8,10 @@ import {
   CssBaseline,
 } from '@material-ui/core';
 import { Brightness2, BrightnessHigh } from '@material-ui/icons';
-import getMuiTheme from './styles/getMuiTheme';
+import getMuiTheme from '../styles/getMuiTheme';
+import Container from '../components/Container';
+
+import '../styles/global.css';
 
 const App: FC = () => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');

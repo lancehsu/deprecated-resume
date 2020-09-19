@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Box, Avatar } from '@material-ui/core';
-import { profile } from '../../content/resumeContent';
+import { profile } from '../../../static/content/resumeContent';
 
 const ProfileImage: FC = () => {
   return (

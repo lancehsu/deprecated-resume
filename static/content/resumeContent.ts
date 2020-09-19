@@ -1,4 +1,5 @@
-import ResumeContent, {
+import {
+  ResumeContent,
   Education,
   Profile,
   Skills,

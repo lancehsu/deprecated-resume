@@ -1,7 +1,12 @@
 {
   "name": "resume",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "Lance's Resume",
   "private": true,
+  "author": {
+    "name": "Lance",
+    "email": "lancehsu12@gmail.com"
+  },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -13,42 +18,43 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "gatsby": "^2.24.63",
+    "gatsby-plugin-react-helmet": "^3.3.11",
+    "gatsby-plugin-typescript": "^2.4.20",
+    "gatsby-theme-material-ui": "^1.0.13",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
+    "typescript": "^4.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "yarn run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.7.0",
-    "@typescript-eslint/parser": "^3.7.0",
-    "eslint": "^7.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
-    "prettier": "^2.0.5"
+    "gatsby-plugin-eslint": "^2.0.8",
+    "prettier": "^2.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lancehsu/resume"
+  },
+  "bugs": {
+    "url": "https://github.com/lancehsu/resume/issues"
   }
 }
