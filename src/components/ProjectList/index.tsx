@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Box, Typography } from '@material-ui/core';
-import { project } from '../../../static/content/resumeContent';
+import { project } from '../../content/resumeContent';
 import ProjectItem from './ProjectItem';
-import { ProjectNames } from '../../../static/content/resumeContentType';
+import { ProjectNames } from '../../content/resumeContentType';
 import useStyles from '../../styles/useStyles';
 
 const ProjectList: FC = () => {

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Box, Typography } from '@material-ui/core';
 import SkillList from './SkillList';
-import { skills } from '../../../static/content/resumeContent';
+import { skills } from '../../content/resumeContent';
 import useStyles from '../../styles/useStyles';
 
 const Skills: FC = () => {

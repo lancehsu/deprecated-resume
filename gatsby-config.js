@@ -8,7 +8,7 @@ require('dotenv').config({
 });
 
 module.exports = {
-  pathPrefix: 'resume',
+  pathPrefix: '/resume',
   siteMetadata: {
     title: `Resume`,
     description: `Lance's resume`,

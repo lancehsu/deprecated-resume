@@ -3,8 +3,8 @@ import Timeline from '@material-ui/lab/Timeline/Timeline';
 import { Box, Typography } from '@material-ui/core';
 
 import WorkExperienceItem from './WorkExperienceItem';
-import { workExperience } from '../../../static/content/resumeContent';
-import { Companies } from '../../../static/content/resumeContentType';
+import { workExperience } from '../../content/resumeContent';
+import { Companies } from '../../content/resumeContentType';
 import useStyles from '../../styles/useStyles';
 
 const WorkExperienceList: FC = () => {

@@ -5,10 +5,10 @@
         display: none !important;
     }
 }
-@media print
+/* @media print
 {    
     .App
     {
         display: none !important;
     }
-}
+} */

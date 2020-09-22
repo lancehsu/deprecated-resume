@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { LinkedIn } from '@material-ui/icons';
-import { profile } from '../../../static/content/resumeContent';
+import { profile } from '../../content/resumeContent';
 
 const LinkedInLinkIcon: FC = () => (
   <a href={profile.linkedIn} target="_blank" rel="noopener noreferrer">
