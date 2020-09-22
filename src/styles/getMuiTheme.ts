@@ -1,6 +1,6 @@
-import { createMuiTheme } from '@material-ui/core';
+import { createMuiTheme, Theme } from '@material-ui/core';
 
-declare module "@material-ui/core/styles/createBreakpoints" {
+declare module '@material-ui/core/styles/createBreakpoints' {
   interface BreakpointOverrides {
     xs: true;
     sm: true;
@@ -13,7 +13,7 @@ declare module "@material-ui/core/styles/createBreakpoints" {
   }
 }
 
-const getMuiTheme = (darkMode: boolean) =>
+const getMuiTheme = (darkMode: boolean): Theme =>
   createMuiTheme({
     palette: {
       type: darkMode ? 'dark' : 'light',

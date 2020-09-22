@@ -1,17 +1,10 @@
 import React, { useMemo, FC, useEffect, useState } from 'react';
-import {
-  Box,
-  IconButton,
-  ThemeProvider,
-  Tooltip,
-  useMediaQuery,
-  CssBaseline,
-} from '@material-ui/core';
-import { Brightness2, BrightnessHigh } from '@material-ui/icons';
+import { Box, ThemeProvider, useMediaQuery, CssBaseline } from '@material-ui/core';
 import getMuiTheme from '../styles/getMuiTheme';
 import Container from '../components/Container';
 
 import '../styles/global.css';
+import DarkButton from '../components/DarkButton';
 
 const App: FC = () => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -33,16 +26,12 @@ const App: FC = () => {
       <CssBaseline />
       <Box className="App">
         <Box style={{ margin: '1em', display: 'flex', justifyContent: 'flex-end' }}>
-          <Tooltip title={darkMode ? 'Light' : 'Dark'}>
-            <IconButton
-              className="darkBtn"
-              onClick={() => {
-                setDarkMode((prev) => !prev);
-              }}
-            >
-              {darkMode ? <BrightnessHigh /> : <Brightness2 />}
-            </IconButton>
-          </Tooltip>
+          <DarkButton
+            darkMode={darkMode}
+            onClick={() => {
+              setDarkMode((prev) => !prev);
+            }}
+          />
         </Box>
         <Container />
       </Box>

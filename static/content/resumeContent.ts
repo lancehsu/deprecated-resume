@@ -51,7 +51,6 @@ export const skills: Skills = {
     'machine learning',
     'image processing',
     'computer graphic',
-    'data structure & algorithms',
   ],
 };
 

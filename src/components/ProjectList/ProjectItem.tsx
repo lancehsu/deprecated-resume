@@ -8,15 +8,17 @@ interface ProjectItemProps {
 }
 const ProjectItem: FC<ProjectItemProps> = ({ name, info }) => {
   return (
-    <Box style={{ display: 'flex', justifyContent: 'space-between', margin: '1em', width: '100%' }}>
-      <Box style={{ display: 'flex', flexFlow: 'column', justifyContent: 'space-between' }}>
+    <Box style={{ display: 'flex', margin: '1em', width: '100%' }}>
+      <Box style={{ display: 'flex', flexFlow: 'column', width: '40%' }}>
         <Box style={{ margin: '1em' }}>
-          <Typography variant="h3">{name}</Typography>
-          <Typography variant="h5" style={{ margin: '0.5em' }}>
+          <Typography variant="h4" style={{ marginBottom: '1.5em' }}>
+            {name}
+          </Typography>
+          <Typography variant="body1" style={{ margin: '0.5em' }}>
             {info.content}
           </Typography>
         </Box>
-        <Typography color="primary" variant="h4" style={{ alignSelf: 'center', margin: '0.5em' }}>
+        <Typography color="primary" variant="h5" style={{ alignSelf: 'center', margin: '2em' }}>
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -27,7 +29,9 @@ const ProjectItem: FC<ProjectItemProps> = ({ name, info }) => {
           </a>
         </Typography>
       </Box>
-      <img width="500em" src={info.image} alt="404" />
+      <Box style={{ width: '60%' }}>
+        <img width="100%" src={info.image} alt="404" />
+      </Box>
     </Box>
   );
 };

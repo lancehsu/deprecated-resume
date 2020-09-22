@@ -20,8 +20,8 @@ const WorkExperienceItem: FC<WorkExperienceItemProps> = ({ name, info }) => {
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
-        <Typography variant="h3">{name}</Typography>
-        <Typography variant="h4">{`${info.title}, (${info.from}-${info.to})`}</Typography>
+        <Typography variant="h4">{name}</Typography>
+        <Typography variant="h5">{`${info.title}, (${info.from}-${info.to})`}</Typography>
         {info.content.map((item, i) => {
           return <InfoContent key={i} name={item.name} url={item.url} details={item.details} />;
         })}
