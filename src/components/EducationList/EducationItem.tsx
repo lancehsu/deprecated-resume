@@ -20,8 +20,8 @@ const EducationItem: FC<EducationItemProps> = ({ name, info }) => {
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
-        <Typography variant="h4">{name}</Typography>
-        <Typography variant="h5">{`${info.degree}, (${info.from}-${info.to})`}</Typography>
+        <Typography variant="h5">{name}</Typography>
+        <Typography variant="h6">{`${info.degree}, (${info.from}-${info.to})`}</Typography>
         {info.content?.map((item, i) => {
           return <InfoContent key={i} name={item.name} url={item.url} details={item.details} />;
         })}

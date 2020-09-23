@@ -17,7 +17,7 @@ const SkillList: FC<SkillListProps> = ({ title, skills }) => {
           key={i}
           style={{ margin: '0.1em' }}
           color="primary"
-          label={<Typography variant="subtitle1">{skill}</Typography>}
+          label={<Typography variant="subtitle2">{skill}</Typography>}
         />
       ))}
     </Box>
