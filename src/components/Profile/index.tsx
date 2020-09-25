@@ -8,7 +8,7 @@ const Profile: FC = () => {
   const classes = useStyles();
   return (
     <Box className={classes.block} style={{ display: 'flex' }}>
-      <Hidden xsDown>
+      <Hidden smDown>
         <ProfileImage />
       </Hidden>
       <Bios />

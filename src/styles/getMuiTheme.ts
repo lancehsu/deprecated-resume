@@ -23,10 +23,10 @@ const getMuiTheme = (darkMode: boolean): Theme =>
     },
     breakpoints: {
       values: {
-        xs: 0,
+        xs: 414, // iPhone
         sm: 550,
-        md: 960,
-        lg: 1280,
+        md: 768, // iPad
+        lg: 794, // A4
         xl: 1920,
       },
     },

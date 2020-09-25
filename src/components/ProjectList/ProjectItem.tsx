@@ -10,11 +10,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ name, info }) => {
   return (
     <Box style={{ display: 'flex', margin: '1.2em', width: '100%' }}>
       <Box style={{ display: 'flex', flexFlow: 'column', width: '40%' }}>
-        <Box style={{ margin: '1em' }}>
-          <Typography variant="h4" style={{ marginBottom: '1.2em' }}>
+        <Box style={{ margin: '0 0.2em' }}>
+          <Typography variant="h4" style={{ marginBottom: '0.5em' }}>
             {name}
           </Typography>
-          <Typography variant="body2" style={{ margin: '0.5em' }}>
+          <Typography variant="h6" style={{ margin: '0.5em' }}>
             {info.content}
           </Typography>
         </Box>
