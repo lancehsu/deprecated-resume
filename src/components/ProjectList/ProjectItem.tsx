@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { Box, Typography } from '@material-ui/core';
 import { ProjectInfo } from '../../content/resumeContentType';
 
@@ -19,14 +20,14 @@ const ProjectItem: FC<ProjectItemProps> = ({ name, info }) => {
           </Typography>
         </Box>
         <Typography color="primary" variant="h5" style={{ alignSelf: 'center', margin: '1.2em' }}>
-          <a
+          <OutboundLink
             target="_blank"
             rel="noopener noreferrer"
             href={info.githubLink}
             style={{ textDecoration: 'none', color: 'inherit' }}
           >
             Github
-          </a>
+          </OutboundLink>
         </Typography>
       </Box>
       <Box style={{ width: '60%' }}>

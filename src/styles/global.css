@@ -1,14 +1,8 @@
-@media print
-{    
-    .darkBtn
-    {
-        display: none !important;
-    }
+@media print {
+  .darkBtn {
+    display: none !important;
+  }
+  .App {
+    display: none !important;
+  }
 }
-/* @media print
-{    
-    .App
-    {
-        display: none !important;
-    }
-} */

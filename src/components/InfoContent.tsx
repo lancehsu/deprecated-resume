@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { Typography } from '@material-ui/core';
 
 interface InfoContentProps {
@@ -13,14 +14,14 @@ const InfoContent: FC<InfoContentProps> = ({ name, url, details }) => {
       {details?.map((detail, i) =>
         detail.url ? (
           <Typography key={i} color="primary" variant="h6" style={{ marginLeft: '2em' }}>
-            <a
+            <OutboundLink
               target="_blank"
               rel="noopener noreferrer"
               href={detail.url}
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
               {detail.name}
-            </a>
+            </OutboundLink>
           </Typography>
         ) : (
           <Typography key={i} variant="h6" style={{ marginLeft: '2em' }}>
