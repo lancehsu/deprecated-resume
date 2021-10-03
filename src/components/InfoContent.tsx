@@ -1,22 +1,18 @@
 import React, { FC } from 'react';
 import { Typography } from '@material-ui/core';
+import { Content } from '../content/resumeContentType';
 
-interface InfoContentProps {
-  name: string;
-  url?: string;
-  details?: { name: string; url?: string }[];
-}
-const InfoContent: FC<InfoContentProps> = ({ name, url, details }) => (
+const InfoContent: FC<Content> = ({ title, url, details }) => (
   <>
-    <InfoTitle name={name} url={url} />
+    <InfoTitle title={title} url={url} />
     {details?.map((detail, i) =>
       detail.url ? (
         <Typography key={i} color="primary" variant="h6" style={{ marginLeft: '2em' }}>
-          {detail.name}
+          {detail.title}
         </Typography>
       ) : (
         <Typography key={i} variant="h6" style={{ marginLeft: '2em' }}>
-          {detail.name}
+          {detail.title}
         </Typography>
       )
     )}
@@ -24,10 +20,10 @@ const InfoContent: FC<InfoContentProps> = ({ name, url, details }) => (
 );
 
 interface InfoTitleProps {
-  name: string;
+  title: string;
   url?: string;
 }
-const InfoTitle: FC<InfoTitleProps> = ({ name, url }) =>
+const InfoTitle: FC<InfoTitleProps> = ({ title, url }) =>
   url ? (
     <Typography color="primary" variant="h5" style={{ margin: '0.1em' }}>
       <a
@@ -36,12 +32,12 @@ const InfoTitle: FC<InfoTitleProps> = ({ name, url }) =>
         href={url}
         style={{ textDecoration: 'none', color: 'inherit' }}
       >
-        {name}
+        {title}
       </a>
     </Typography>
   ) : (
     <Typography variant="h5" style={{ margin: '0.1em' }}>
-      {name}
+      {title}
     </Typography>
   );
 

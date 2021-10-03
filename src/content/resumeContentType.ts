@@ -36,13 +36,14 @@ export type Skills = {
   knowledge: string[];
 };
 
-type Content = { name: string; url?: string; details?: { name: string; url?: string }[] };
+export type Detail = { title: string; url?: string };
+export type Content = Detail & { details?: ReadonlyArray<Detail> };
 
 export type WorkExperienceInfo = {
   title: string;
   from: string;
   to: string;
-  content: Content[];
+  content: ReadonlyArray<Content>;
 };
 
 export type WorkExperience = {

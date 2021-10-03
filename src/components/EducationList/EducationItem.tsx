@@ -22,7 +22,7 @@ const EducationItem: FC<EducationItemProps> = ({ name, info }) => (
       <Typography variant="h5">{name}</Typography>
       <Typography variant="h6">{`${info.degree}, (${info.from}-${info.to})`}</Typography>
       {info.content?.map((item, i) => (
-        <InfoContent key={i} name={item.name} url={item.url} details={item.details} />
+        <InfoContent key={i} title={item.title} url={item.url} details={item.details} />
       ))}
     </TimelineContent>
   </RightTimelineItem>
