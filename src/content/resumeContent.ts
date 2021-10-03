@@ -26,13 +26,11 @@ export const skills: Skills = {
     'HTML/CSS/JavaScript',
     'TypeScript',
     'React',
-    'React hooks',
     'GraphQL',
     'Redux',
-    'Redux-Thunk',
     'Next.js',
     'Material UI',
-    'i18next',
+    'i18n',
     'Git',
   ],
   familiar: [
@@ -45,8 +43,16 @@ export const skills: Skills = {
     'Konva.js',
     'Babylon.js',
     'Docker',
+    'Storybook',
   ],
-  knowledge: ['Java', 'Python', 'machine learning', 'image processing', 'computer graphic'],
+  knowledge: [
+    'Java',
+    'Python',
+    'Redis',
+    'machine learning',
+    'image processing',
+    'computer graphic',
+  ],
 };
 
 export const workExperience: WorkExperience = {
@@ -54,7 +60,25 @@ export const workExperience: WorkExperience = {
     title: 'Software Engineer',
     from: '2020 Oct',
     to: 'Present',
-    content: [],
+    content: [
+      {
+        title: 'Building data science platform',
+        details: [
+          {
+            title:
+              'Developing web application using React, TypeScript, PostCSS, GraphQL, & MongoDB',
+          },
+          {
+            title:
+              'Communicate with UI/UX designers, PM, & back-end team to clarify the requirement',
+          },
+          {
+            title:
+              'Planning sprint tasks with front-end team and ensure the tasks are delivered smoothly',
+          },
+        ],
+      },
+    ],
   },
   [Companies.linker]: {
     title: 'Software Engineer',
@@ -62,25 +86,27 @@ export const workExperience: WorkExperience = {
     to: '2020 Aug',
     content: [
       {
-        name: 'Building data labeling platform',
+        title: 'Building data labeling platform',
         details: [
           {
-            name:
+            title:
               'Developing web application using TypeScript, React.js, Apollo GraphQL, Next.js, & Fluent UI',
           },
-          { name: 'Developing 2D image labeling system using canvas 2d library Konva.js' },
-          { name: 'Developing medical image labeling system for CT & MRI images labeling' },
-          { name: 'Developing LiDAR point cloud labeling system using WebGL framework Babylon.js' },
-          { name: 'Communicate with back-end engineers about API design' },
-          { name: 'Providing web app internationalization by i18next for global users' },
+          { title: 'Developing 2D image labeling system using canvas 2d library Konva.js' },
+          { title: 'Developing medical image labeling system for CT & MRI images labeling' },
           {
-            name:
+            title: 'Developing LiDAR point cloud labeling system using WebGL framework Babylon.js',
+          },
+          { title: 'Communicate with back-end engineers about API design' },
+          { title: 'Providing web app internationalization by i18next for global users' },
+          {
+            title:
               'Communicate with data scientists about UX and APIs for label assistance tools implemented using computer vision and machine learning',
           },
         ],
       },
       {
-        name:
+        title:
           'Developing Microsoft Vision on Edge solution with Typescript, React.js, Redux, Redux-Thunk, Konva.js, & Fluent UI',
         url: 'https://github.com/Azure-Samples/azure-intelligent-edge-patterns',
       },
@@ -95,20 +121,20 @@ export const education: Education = {
     degree: 'Master of Engineering, Bio-Industrial Mechatronics Engineering',
     content: [
       {
-        name: 'Conference',
+        title: 'Conference',
         details: [
           {
-            name:
+            title:
               'International Symposium on Machinery and Mechatronics for Agriculture and Bio-systems Engineering (ISMAB) 2016',
           },
-          { name: 'Conference on Agricultural Machinery and Bio-Mechatronics Engineering 2016' },
+          { title: 'Conference on Agricultural Machinery and Bio-Mechatronics Engineering 2016' },
         ],
       },
       {
-        name: 'Journal',
+        title: 'Journal',
         details: [
           {
-            name:
+            title:
               'Hsu, H.-C., Hsu, K.-L., Chan, C.-Y., Wang, C.-N., & Kuo, Y.-F., Quantifying colour and spot characteristics for the ventral petals in Sinningia speciosa, Biosystems Engineering, 167, 40-50.',
             url: 'https://www.sciencedirect.com/science/article/abs/pii/S1537511017308218',
           },
