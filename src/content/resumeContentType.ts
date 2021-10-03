@@ -1,5 +1,6 @@
 export enum Companies {
   linker = 'Linker Networks Inc.',
+  appier = 'Appier Inc.',
 }
 
 export enum Colleges {

@@ -12,10 +12,10 @@ import {
 
 export const profile: Profile = {
   name: 'Kung-Ling Hsu',
-  image: './profile.png',
+  image: '../../profile.png',
   mail: 'lancehsu12@gmail.com',
   summary:
-    'A detail-oriented and dependable software engineer seeking a position to offer expertise in HTML/CSS/JavaScript, React.js, Redux, Apollo GraphQL, Next.js to develop web application.',
+    'A detail-oriented and dependable software engineer seeking a position to offer expertise in HTML/CSS/JavaScript, React.js, Redux, Apollo GraphQL, MongoDB to develop web application.',
   github: 'https://github.com/lancehsu',
   linkedIn: 'https://www.linkedin.com/in/klhsu/',
   target: 'Front-end/Full-stack engineer',
@@ -27,38 +27,39 @@ export const skills: Skills = {
     'TypeScript',
     'React',
     'React hooks',
-    'Apollo GraphQL',
+    'GraphQL',
     'Redux',
     'Redux-Thunk',
     'Next.js',
-    'Babylon.js',
-    'Konva.js',
     'Material UI',
-    'Fluent UI',
     'i18next',
     'Git',
-    'Github',
-    'VSCode',
   ],
-  familiar: ['Gatsby.js', 'Express.js', 'MongoDB', 'MATLAB', 'Webpack', 'Heroku', 'Vim'],
-  knowledge: [
-    'Java',
-    'Python',
-    'Cpp',
+  familiar: [
+    'Express.js',
+    'MongoDB',
     'SQL',
-    'Sentry',
+    'Gatsby.js',
+    'Webpack',
+    'Heroku',
+    'Konva.js',
+    'Babylon.js',
     'Docker',
-    'machine learning',
-    'image processing',
-    'computer graphic',
   ],
+  knowledge: ['Java', 'Python', 'machine learning', 'image processing', 'computer graphic'],
 };
 
 export const workExperience: WorkExperience = {
+  [Companies.appier]: {
+    title: 'Software Engineer',
+    from: '2020 Oct',
+    to: 'Present',
+    content: [],
+  },
   [Companies.linker]: {
     title: 'Software Engineer',
     from: '2019 Feb',
-    to: 'Present',
+    to: '2020 Aug',
     content: [
       {
         name: 'Building data labeling platform',
@@ -124,7 +125,7 @@ export const education: Education = {
 
 export const project: Project = {
   [ProjectNames.Azure]: {
-    image: './projects/Azure-Sample.png',
+    image: '../../Azure-Sample.png',
     githubLink:
       'https://github.com/Azure-Samples/azure-intelligent-edge-patterns/tree/master/factory-ai-vision',
     content:
