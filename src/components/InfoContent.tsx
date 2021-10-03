@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { Typography } from '@material-ui/core';
 
 interface InfoContentProps {
@@ -7,31 +6,22 @@ interface InfoContentProps {
   url?: string;
   details?: { name: string; url?: string }[];
 }
-const InfoContent: FC<InfoContentProps> = ({ name, url, details }) => {
-  return (
-    <>
-      <InfoTitle name={name} url={url} />
-      {details?.map((detail, i) =>
-        detail.url ? (
-          <Typography key={i} color="primary" variant="h6" style={{ marginLeft: '2em' }}>
-            <OutboundLink
-              target="_blank"
-              rel="noopener noreferrer"
-              href={detail.url}
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              {detail.name}
-            </OutboundLink>
-          </Typography>
-        ) : (
-          <Typography key={i} variant="h6" style={{ marginLeft: '2em' }}>
-            {detail.name}
-          </Typography>
-        )
-      )}
-    </>
-  );
-};
+const InfoContent: FC<InfoContentProps> = ({ name, url, details }) => (
+  <>
+    <InfoTitle name={name} url={url} />
+    {details?.map((detail, i) =>
+      detail.url ? (
+        <Typography key={i} color="primary" variant="h6" style={{ marginLeft: '2em' }}>
+          {detail.name}
+        </Typography>
+      ) : (
+        <Typography key={i} variant="h6" style={{ marginLeft: '2em' }}>
+          {detail.name}
+        </Typography>
+      )
+    )}
+  </>
+);
 
 interface InfoTitleProps {
   name: string;

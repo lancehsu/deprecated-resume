@@ -12,22 +12,20 @@ interface EducationItemProps {
   name: string;
   info: EducationInfo;
 }
-const EducationItem: FC<EducationItemProps> = ({ name, info }) => {
-  return (
-    <RightTimelineItem>
-      <TimelineSeparator>
-        <TimelineDot />
-        <TimelineConnector />
-      </TimelineSeparator>
-      <TimelineContent>
-        <Typography variant="h5">{name}</Typography>
-        <Typography variant="h6">{`${info.degree}, (${info.from}-${info.to})`}</Typography>
-        {info.content?.map((item, i) => {
-          return <InfoContent key={i} name={item.name} url={item.url} details={item.details} />;
-        })}
-      </TimelineContent>
-    </RightTimelineItem>
-  );
-};
+const EducationItem: FC<EducationItemProps> = ({ name, info }) => (
+  <RightTimelineItem>
+    <TimelineSeparator>
+      <TimelineDot />
+      <TimelineConnector />
+    </TimelineSeparator>
+    <TimelineContent>
+      <Typography variant="h5">{name}</Typography>
+      <Typography variant="h6">{`${info.degree}, (${info.from}-${info.to})`}</Typography>
+      {info.content?.map((item, i) => (
+        <InfoContent key={i} name={item.name} url={item.url} details={item.details} />
+      ))}
+    </TimelineContent>
+  </RightTimelineItem>
+);
 
 export default EducationItem;

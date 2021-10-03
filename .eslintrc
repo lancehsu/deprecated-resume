@@ -55,6 +55,7 @@
         "prop": "ignore"
       }
     ],
+    "react/no-array-index-key": "off",
     "no-console": ["warn", { "allow": ["warn", "error", "info", "dir", "table"] }],
     "no-use-before-define": "off",
     "no-shadow": "off",

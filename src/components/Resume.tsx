@@ -7,16 +7,14 @@ import WorkExperienceList from './WorkExperienceList';
 import EducationList from './EducationList';
 import ProjectList from './ProjectList';
 
-const Resume: FC = () => {
-  return (
-    <Container className="container" maxWidth="lg" style={{ margin: 'auto' }}>
-      <Profile />
-      <Skills />
-      <WorkExperienceList />
-      <EducationList />
-      <ProjectList />
-    </Container>
-  );
-};
+const Resume: FC = () => (
+  <Container className="container" maxWidth="lg" style={{ margin: 'auto' }}>
+    <Profile />
+    <Skills />
+    <WorkExperienceList />
+    <EducationList />
+    <ProjectList />
+  </Container>
+);
 
 export default Resume;
