@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Typography } from '@material-ui/core';
+import { Link, Typography } from '@material-ui/core';
 import { Content } from '../content/resumeContentType';
 
 const InfoContent: FC<Content> = ({ title, url, details }) => (
@@ -7,9 +7,11 @@ const InfoContent: FC<Content> = ({ title, url, details }) => (
     <InfoTitle title={title} url={url} />
     {details?.map((detail, i) =>
       detail.url ? (
-        <Typography key={i} color="primary" variant="h6" style={{ marginLeft: '2em' }}>
-          {detail.title}
-        </Typography>
+        <Link href={detail.url} target="_blank" rel="noopener noreferrer">
+          <Typography key={i} color="primary" variant="h6" style={{ marginLeft: '2em' }}>
+            {detail.title}
+          </Typography>
+        </Link>
       ) : (
         <Typography key={i} variant="h6" style={{ marginLeft: '2em' }}>
           {detail.title}

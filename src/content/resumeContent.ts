@@ -12,7 +12,7 @@ import {
 
 export const profile: Profile = {
   name: 'Kung-Ling Hsu',
-  image: '../../profile.png',
+  image: './profile.png',
   mail: 'lancehsu12@gmail.com',
   summary:
     'A detail-oriented and dependable software engineer seeking a position to offer expertise in HTML/CSS/JavaScript, React.js, Redux, Apollo GraphQL, MongoDB to develop web application.',
@@ -151,7 +151,7 @@ export const education: Education = {
 
 export const project: Project = {
   [ProjectNames.Azure]: {
-    image: '../../Azure-Sample.png',
+    image: './Azure-Sample.png',
     githubLink:
       'https://github.com/Azure-Samples/azure-intelligent-edge-patterns/tree/master/factory-ai-vision',
     content:
