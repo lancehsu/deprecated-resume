@@ -18,5 +18,11 @@ module.exports = {
     'gatsby-plugin-material-ui',
     'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: 'src/content/L.png',
+      },
+    },
   ],
 };
