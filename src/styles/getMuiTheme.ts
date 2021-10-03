@@ -18,7 +18,7 @@ const getMuiTheme = (darkMode: boolean): Theme =>
     palette: {
       type: darkMode ? 'dark' : 'light',
       primary: {
-        main: '#673ab7',
+        main: '#009688',
       },
     },
     breakpoints: {

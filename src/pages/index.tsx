@@ -25,7 +25,7 @@ const App: FC = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box className="App">
-        <Box style={{ margin: '1em', display: 'flex', justifyContent: 'flex-end' }}>
+        <Box className="Nav" style={{ margin: '1em', display: 'flex', justifyContent: 'flex-end' }}>
           <DarkButton
             darkMode={darkMode}
             onClick={() => {

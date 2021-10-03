@@ -8,9 +8,7 @@ interface DarkButtonProps {
 }
 const DarkButton: FC<DarkButtonProps> = ({ darkMode, onClick }) => (
   <Tooltip title={darkMode ? 'Light' : 'Dark'}>
-    <IconButton className="darkBtn" onClick={onClick}>
-      {darkMode ? <BrightnessHigh /> : <Brightness2 />}
-    </IconButton>
+    <IconButton onClick={onClick}>{darkMode ? <BrightnessHigh /> : <Brightness2 />}</IconButton>
   </Tooltip>
 );
 
