@@ -12,7 +12,7 @@ const EducationList: FC = () => {
   const collegeNames = Object.keys(education) as Colleges[];
   return (
     <Box className={classes.block}>
-      <Typography variant="h3">Education</Typography>
+      <Typography variant="h5">Education</Typography>
       <Timeline>
         {collegeNames.map((name, i) => (
           <EducationItem key={i} name={name} info={education[name]} />

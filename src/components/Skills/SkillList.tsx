@@ -6,10 +6,8 @@ interface SkillListProps {
   skills: string[];
 }
 const SkillList: FC<SkillListProps> = ({ title, skills }) => (
-  <Box>
-    <Typography variant="h5" style={{ margin: '0.5em' }}>
-      {title}
-    </Typography>
+  <Box marginTop="1em">
+    <Typography variant="h6">{title}</Typography>
     <Divider variant="fullWidth" style={{ margin: '0.5em 0' }} />
     {skills.map((skill, i) => (
       <Chip
