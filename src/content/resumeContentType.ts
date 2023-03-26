@@ -1,6 +1,8 @@
 export enum Companies {
   linker = 'Linker Networks Inc.',
   appier = 'Appier Inc.',
+  cdc = 'Crypto.com',
+  cronos = 'Cronos Labs',
 }
 
 export enum Colleges {
@@ -36,36 +38,31 @@ export type Skills = {
   knowledge: string[];
 };
 
-export type Detail = { title: string; url?: string };
+export type Detail = { title?: string; url?: string };
 export type Content = Detail & { details?: ReadonlyArray<Detail> };
 
 export type WorkExperienceInfo = {
   title: string;
-  from: string;
-  to: string;
+  location: string;
+  from?: string;
+  to?: string;
   content: ReadonlyArray<Content>;
 };
 
-export type WorkExperience = {
-  [company in Companies]: WorkExperienceInfo;
-};
+export type WorkExperience = Record<Companies, WorkExperienceInfo>;
 
 export type EducationInfo = {
   from: string;
   to: string;
+  location: string;
   degree: string;
   content?: Content[];
 };
-
-export type Education = {
-  [college in Colleges]: EducationInfo;
-};
+export type Education = Record<Colleges, EducationInfo>;
 
 export type ProjectInfo = {
   image: string;
   content: string;
   githubLink: string;
 };
-export type Project = {
-  [project in ProjectNames]: ProjectInfo;
-};
+export type Project = Record<ProjectNames, ProjectInfo>;

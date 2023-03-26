@@ -13,7 +13,6 @@ const Resume: FC = () => (
     <Skills />
     <WorkExperienceList />
     <EducationList />
-    <ProjectList />
   </Container>
 );
 

@@ -12,7 +12,7 @@ const WorkExperienceList: FC = () => {
   const companyNames = Object.keys(workExperience) as Companies[];
   return (
     <Box className={classes.block}>
-      <Typography variant="h3">Work Experience</Typography>
+      <Typography variant="h5">Work Experience</Typography>
       <Timeline>
         {companyNames.map((name, i) => (
           <WorkExperienceItem key={i} name={name} info={workExperience[name]} />

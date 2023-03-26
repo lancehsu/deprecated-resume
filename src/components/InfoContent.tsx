@@ -4,20 +4,22 @@ import { Content } from '../content/resumeContentType';
 
 const InfoContent: FC<Content> = ({ title, url, details }) => (
   <>
-    <InfoTitle title={title} url={url} />
-    {details?.map((detail, i) =>
-      detail.url ? (
-        <Link href={detail.url} target="_blank" rel="noopener noreferrer">
-          <Typography key={i} color="primary" variant="h6" style={{ marginLeft: '2em' }}>
-            {detail.title}
-          </Typography>
-        </Link>
-      ) : (
-        <Typography key={i} variant="h6" style={{ marginLeft: '2em' }}>
-          {detail.title}
-        </Typography>
-      )
-    )}
+    {title && <InfoTitle title={title} url={url} />}
+    <ul style={{ listStyleType: 'disc' }}>
+      {details?.map((detail, i) => (
+        <li key={i}>
+          {detail.url ? (
+            <Link href={detail.url} target="_blank" rel="noopener noreferrer">
+              <Typography color="primary" variant="h6">
+                {detail.title}
+              </Typography>
+            </Link>
+          ) : (
+            <Typography variant="h6">{detail.title}</Typography>
+          )}
+        </li>
+      ))}
+    </ul>
   </>
 );
 
@@ -27,7 +29,7 @@ interface InfoTitleProps {
 }
 const InfoTitle: FC<InfoTitleProps> = ({ title, url }) =>
   url ? (
-    <Typography color="primary" variant="h5" style={{ margin: '0.1em' }}>
+    <Typography color="primary" variant="h6" style={{ margin: '0.1em' }}>
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -38,7 +40,7 @@ const InfoTitle: FC<InfoTitleProps> = ({ title, url }) =>
       </a>
     </Typography>
   ) : (
-    <Typography variant="h5" style={{ margin: '0.1em' }}>
+    <Typography variant="h6" style={{ margin: '0.1em' }}>
       {title}
     </Typography>
   );

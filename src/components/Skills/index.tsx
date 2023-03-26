@@ -8,7 +8,7 @@ const Skills: FC = () => {
   const classes = useStyles();
   return (
     <Box className={classes.block}>
-      <Typography variant="h3">Skills</Typography>
+      <Typography variant="h5">Skills</Typography>
       <Box display="grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: '3em' }}>
         <SkillList title="Proficient in" skills={skills.proficiency} />
         <SkillList title="Familiar with" skills={skills.familiar} />
