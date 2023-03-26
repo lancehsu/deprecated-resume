@@ -1,8 +1,0 @@
-@media print {
-  .Nav {
-    display: none !important;
-  }
-  .App {
-    display: none !important;
-  }
-}
