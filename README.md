@@ -1,3 +1,3 @@
-## Resume
+## Resume (deprecated)
 
-https://lancehsu.github.io/resume/
+See <https://github.com/lancehsu/resume>
